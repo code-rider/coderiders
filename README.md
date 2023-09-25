@@ -1,5 +1,5 @@
 # CodeRiders 
-#### Company Portfolio Drupal Distribution/Profile  
+Company Portfolio Drupal Distribution/Profile  
 
 **Drupal Distribution**  
 Distributions provide site features and functions for a specific type of site as a single download containing Drupal core, contributed modules, themes, and pre-defined configuration. They make it possible to quickly set up a complex, use-specific site in fewer steps than if installing and configuring elements individually.
