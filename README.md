@@ -50,8 +50,8 @@ Currently, when we are writing this profile Drupal's latest version is 10.1.2
 **Step 1.**  
   Download Fresh Drupal using composer or manual  
 
-**Step 2.**
-  **Required Modules:**
+**Step 2.**  
+  **Required Modules:**  
 	  [AddToAny Share Buttons](https://www.drupal.org/project/addtoany)  
 	  [Better Exposed Filters](https://www.drupal.org/project/better_exposed_filters)  
 	  [CAPTCHA](https://www.drupal.org/project/captcha)  
@@ -77,7 +77,7 @@ Currently, when we are writing this profile Drupal's latest version is 10.1.2
   **CodeRiders Profile**  
     Download this Repository and place in install-dir/profiles
 
-**Step 3.**
+**Step 3.**  
   Start Installation of Drupal in a standard way  
   At step 2 of installation "Choose profile" select profile "CodeRiders"  
   ![Step 2 of installation "Choose profile"!](/assets/images/installtion-2.png "Profile CodeRider selected")  
@@ -95,6 +95,16 @@ Currently, when we are writing this profile Drupal's latest version is 10.1.2
   Clear cache  
   Press  the "Clear all caches" button after the page reloads and all Caches cleared navigate to the front page  
   You are ready to go online   
+
+**Step 5.**  (optional)
+  As of today, two contributed modules have issues that need to be fixed  
+  1. [January Bootstrap 5 theme](https://www.drupal.org/project/january_theme)  
+    issue: [User page like user/1 get error](https://www.drupal.org/project/january_theme/issues/3389460)  
+  2. [Pathauto](https://www.drupal.org/project/pathauto)  
+    issue: [PHP 8.2 compatibility](https://www.drupal.org/project/pathauto/issues/3328670)  
+  
+  Maybe when you download this repository, both issues will be solved or fixed in the new version  
+  But if issues are not fixed, these issues have a patch, and you may apply these simple patches  
 
 # Customization  
 Personalize your site by updating the content, theme settings, and configuration to align with your brand and objectives.  
