@@ -1,6 +1,8 @@
 # CodeRiders 
 Company Portfolio Drupal Distribution/Profile  
-
+<table>
+<tr>
+<td width='66%' valign="top" style="padding-top: 30px;">
 Welcome to the CodeRiders Company Portfolio [Drupal](https://www.drupal.org/project/drupal) Distribution, a turnkey solution for building stunning company portfolio websites with ease. Whether you're a small business, startup, or established company, our distribution provides you with the tools and pre-configured features to showcase your work, team, and expertise effectively.  
 
 **Drupal Distribution**  
@@ -36,7 +38,10 @@ Stay connected with your audience using customizable contact forms that make it 
 
 **Social Media Integration:**  
 Seamlessly integrate your social media profiles to expand your online presence.  
-
+</td>
+<td>!["January Bootstrap 5 theme"!](/assets/images/Home-January.png "January Bootstrap 5 theme")</td>
+</tr>
+</table>
 # How to Get Started:
 
 ### Installation:  
