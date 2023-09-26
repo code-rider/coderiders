@@ -39,10 +39,10 @@ Stay connected with your audience using customizable contact forms that make it 
 **Social Media Integration:**  
 Seamlessly integrate your social media profiles to expand your online presence.  
 </td>
-<td>!["January Bootstrap 5 theme"!](/assets/images/Home-January.png "January Bootstrap 5 theme")</td>
+<td> !["January Bootstrap 5 theme"!](/assets/images/Home-January.png "January Bootstrap 5 theme") </td>
 </tr>
-</table>
-# How to Get Started:
+</table>  
+# How to Get Started:  
 
 ### Installation:  
 
