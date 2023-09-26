@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: footer-quick-links
+label: 'Footer Quick links'
+description: 'Used in foort for quick links display'
+locked: false

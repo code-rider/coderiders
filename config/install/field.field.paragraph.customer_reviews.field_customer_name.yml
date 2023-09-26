@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_customer_name
+    - paragraphs.paragraphs_type.customer_reviews
+id: paragraph.customer_reviews.field_customer_name
+field_name: field_customer_name
+entity_type: paragraph
+bundle: customer_reviews
+label: 'Customer Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

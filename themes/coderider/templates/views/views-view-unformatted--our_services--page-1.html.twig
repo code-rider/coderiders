@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+
+  {# <div{{ row.attributes.addClass(row_classes) }}>
+  {{ dump(row.content)}}
+  <span class="icon"><img src="{{ file_url(row.content["#paragraph"].field_service_icon.entity.field_media_image.entity.fileuri) }}" alt="icon"></span>
+    {{- row.content -}}
+  </div> #}
+
+  <div class="our-services-wrappp-inner"> 
+    <div class="row align-items-center">
+      <div class="col-lg-6 content-wrapper">
+        <h3>
+          <span class="icon">
+            <img src="{{ row.content["#paragraph"].field_service_icon | file_url }}" alt="icon">
+            {# {{ row.content["#paragraph"].field_service_icon | view }} #}
+          </span>
+          {{ row.content["#paragraph"].field_service_name.value }}
+        </h3>
+        {{ row.content["#paragraph"].field_service_detail.value|check_markup('restricted_html') }}
+      </div>
+
+      <div class="col-lg-6">
+        <div class="img-wrapper">
+          <img src="{{ row.content["#paragraph"].field_service_image|file_url }}">
+        
+          {# {{ row.content["#paragraph"].field_service_image | view }} #}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+      
+
+{% endfor %}

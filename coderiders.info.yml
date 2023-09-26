@@ -1,0 +1,69 @@
+name: CodeRiders
+type: profile
+description: 'Install with CodeRiders Portfolio Distribution with all features pre-configured and demo content.'
+core_version_requirement: '^8.8 || ^9 || ^10'
+# version: VERSION
+install:
+- node
+- big_pipe
+- block
+- block_content
+- breakpoint
+- ckeditor5
+- comment
+- config
+- contact
+- contextual
+- menu_link_content
+- dblog
+- field_ui
+- help
+- history
+- dynamic_page_cache
+- page_cache
+- layout_builder
+- layout_discovery
+- media
+- media_library
+- menu_ui
+- path
+- search
+- shortcut
+- taxonomy
+- editor
+- toolbar
+- tour
+- views
+- views_ui
+- ctools
+- datetime
+- datetime_range
+- entity_reference_revisions
+- file
+- image
+- link
+- options
+- telephone
+- jquery_ui
+- jquery_ui_datepicker
+- jquery_ui_slider
+- jquery_ui_touch_punch
+- addtoany
+- fences
+- pathauto
+- token
+- twig_tweak
+- paragraphs
+- captcha
+- better_exposed_filters
+- automated_cron
+themes:
+  - olivero
+  - claro
+  - january
+  - coderider
+
+# Information added by Drupal.org packaging script on 2023-08-02
+version: '10.1.2'
+project: 'drupal'
+datestamp: 1690972232

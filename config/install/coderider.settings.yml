@@ -1,0 +1,17 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+twitter: 'https://twitter.com'
+facebook: 'https://www.facebook.com'
+instagram: 'https://www.instagram.com'
+youtube: 'https://www.youtube.com'
+phone: XXXX XXXX XXX
+email: email@domain.tld
+address: "123 Abc Street, Manchester, NH 64 ABC Street, Suite 302, Concord, VO03301 10 Xyz Street, AU"
+management_message: ''

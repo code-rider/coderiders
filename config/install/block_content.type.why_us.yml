@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: why_us
+label: 'Why us'
+revision: 0
+description: 'Front page block Why partner with  us.'

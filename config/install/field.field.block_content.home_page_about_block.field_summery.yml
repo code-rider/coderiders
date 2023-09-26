@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_page_about_block
+    - field.storage.block_content.field_summery
+id: block_content.home_page_about_block.field_summery
+field_name: field_summery
+entity_type: block_content
+bundle: home_page_about_block
+label: summery
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

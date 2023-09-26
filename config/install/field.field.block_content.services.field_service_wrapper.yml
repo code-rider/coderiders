@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.services
+    - field.storage.block_content.field_service_wrapper
+    - paragraphs.paragraphs_type.services
+  module:
+    - entity_reference_revisions
+id: block_content.services.field_service_wrapper
+field_name: field_service_wrapper
+entity_type: block_content
+bundle: services
+label: 'Service Wrapper'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      services: services
+    negate: 0
+    target_bundles_drag_drop:
+      customer_reviews:
+        weight: 4
+        enabled: false
+      services:
+        weight: 3
+        enabled: true
+field_type: entity_reference_revisions

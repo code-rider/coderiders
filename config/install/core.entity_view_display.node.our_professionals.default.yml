@@ -1,0 +1,122 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.our_professionals.field_job_type
+    - field.field.node.our_professionals.field_media_image
+    - field.field.node.our_professionals.field_member_about
+    - field.field.node.our_professionals.field_member_email
+    - field.field.node.our_professionals.field_member_phone
+    - field.field.node.our_professionals.field_member_social
+    - field.field.node.our_professionals.field_professional_statement
+    - field.field.node.our_professionals.field_specializations
+    - node.type.our_professionals
+  module:
+    - fences
+    - link
+    - telephone
+    - user
+id: node.our_professionals.default
+targetEntityType: node
+bundle: our_professionals
+mode: default
+content:
+  field_job_type:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_member_about:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: h3
+        fences_label_classes: ''
+    weight: 102
+    region: content
+  field_member_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_member_phone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_member_social:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_professional_statement:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: h3
+        fences_label_classes: ''
+    weight: 103
+    region: content
+  field_specializations:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: h3
+        fences_label_classes: ''
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

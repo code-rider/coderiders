@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: customer_reviews
+label: 'Customer Reviews'
+icon_uuid: null
+icon_default: null
+description: 'Holding Customer reviews'
+behavior_plugins: {  }

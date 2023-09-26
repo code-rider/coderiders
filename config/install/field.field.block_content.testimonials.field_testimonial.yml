@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonials
+    - field.storage.block_content.field_testimonial
+    - paragraphs.paragraphs_type.customer_reviews
+  module:
+    - entity_reference_revisions
+id: block_content.testimonials.field_testimonial
+field_name: field_testimonial
+entity_type: block_content
+bundle: testimonials
+label: Testimonial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      customer_reviews: customer_reviews
+    negate: 0
+    target_bundles_drag_drop:
+      customer_reviews:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

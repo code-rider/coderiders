@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.customer_reviews.field_customer_designation
+    - field.field.paragraph.customer_reviews.field_customer_image
+    - field.field.paragraph.customer_reviews.field_customer_name
+    - field.field.paragraph.customer_reviews.field_customer_review_message
+    - paragraphs.paragraphs_type.customer_reviews
+id: paragraph.customer_reviews.default
+targetEntityType: paragraph
+bundle: customer_reviews
+mode: default
+content:
+  field_customer_designation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_customer_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_customer_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_customer_review_message:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.our_mission
+    - field.field.block_content.our_mission.field_our_goal
+  module:
+    - entity_reference_revisions
+id: block_content.our_mission.default
+targetEntityType: block_content
+bundle: our_mission
+mode: default
+content:
+  field_our_goal:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

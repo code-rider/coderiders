@@ -1,0 +1,10 @@
+uuid: 67fdf77f-3027-4890-b512-18a7d132e2df
+langcode: en
+status: true
+dependencies: {  }
+id: our_vision
+label: 'Our Vision'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_about_block
+label: 'Home page About block'
+revision: 0
+description: 'Home page about block'

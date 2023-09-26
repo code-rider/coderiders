@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.our_professionals.field_job_type
+    - field.field.node.our_professionals.field_media_image
+    - field.field.node.our_professionals.field_member_about
+    - field.field.node.our_professionals.field_member_email
+    - field.field.node.our_professionals.field_member_phone
+    - field.field.node.our_professionals.field_member_social
+    - field.field.node.our_professionals.field_professional_statement
+    - field.field.node.our_professionals.field_specializations
+    - node.type.our_professionals
+  module:
+    - telephone
+    - user
+id: node.our_professionals.teaser
+targetEntityType: node
+bundle: our_professionals
+mode: teaser
+content:
+  field_job_type:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_member_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_member_phone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_member_about: true
+  field_member_social: true
+  field_professional_statement: true
+  field_specializations: true

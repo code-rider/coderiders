@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.case_studies
+  module:
+    - system
+    - views
+  theme:
+    - coderider
+id: coderider_views_block__case_studies_block_1
+theme: coderider
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:case_studies-block_1'
+settings:
+  id: 'views_block:case_studies-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '10'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

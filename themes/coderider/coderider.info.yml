@@ -1,0 +1,28 @@
+# This theme Designed and Developed by CodeRiders
+name: CodeRider Theme
+type: theme
+base theme: january
+description: 'A clean, accessible, and flexible Drupal front-end theme.'
+alt text: 'Screenshot of January Dotsquares Theme, Drupal front-end theme.'
+package: Theme
+core_version_requirement: ^9.3 || ^10
+
+libraries:
+  - coderider/global-styling
+regions:
+  topbar: Topbar
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  hero: 'Hero (full width)'
+  content_above: Content Above
+  content: Content
+  sidebar: 'Sidebar'
+  content_below: 'Content Below'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_bottom: 'Footer Bottom'
+

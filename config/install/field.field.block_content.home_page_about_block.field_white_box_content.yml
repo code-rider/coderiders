@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_page_about_block
+    - field.storage.block_content.field_white_box_content
+id: block_content.home_page_about_block.field_white_box_content
+field_name: field_white_box_content
+entity_type: block_content
+bundle: home_page_about_block
+label: 'white box content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

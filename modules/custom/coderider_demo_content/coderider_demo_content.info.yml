@@ -1,0 +1,6 @@
+name: 'CodeRiders Demo Content'
+description: Imports the content for the CodeRider distribution demo. Dont uninstall this module uninstall  will delete all demo content created by this module
+type: module
+# version: VERSION
+package: 'CodeRider Demo Content'
+core_version_requirement: ^9.2 || ^10

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: our_professionals_node_urls
+label: 'Our Professionals node URLs'
+type: 'canonical_entities:node'
+pattern: 'member/[node:title]'
+selection_criteria:
+  5ccabb8b-4ffb-4203-9898-abbf3d21de20:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 5ccabb8b-4ffb-4203-9898-abbf3d21de20
+    context_mapping:
+      node: node
+    bundles:
+      our_professionals: our_professionals
+selection_logic: and
+weight: -5
+relationships: {  }

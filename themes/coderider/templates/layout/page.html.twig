@@ -1,0 +1,263 @@
+{#
+/**
+ * @file
+ * january's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar: Items for the first sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.social: Items for the social region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+
+{% if page.header or page.primary_menu %}
+	{# topbar #}
+	<div class="topbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<p>{{ page.topbar }}
+						<a href="tel:+{{ january_info_link_phone }}">+{{ january_info_link_phone }}</a>
+					</p>
+				</div>
+				<div class="col-lg-4">
+					<ul class="social-links">
+						<li class='facebook'>
+							<a href="{{ january_social_link_facebook }}" target='_blank'>
+								<i class="fa-brands fa-facebook-f"></i>
+							</a>
+						</li>
+						<li class='twitter'>
+							<a href="{{ january_social_link_twitter }}" target='_blank'>
+								<i class="fa-brands fa-twitter"></i>
+							</a>
+						</li>
+						<li class='insta'>
+							<a href="{{ january_social_link_instagram }}" target='_blank'>
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+						</li>
+						<li class='youtube'>
+							<a href="{{ january_social_link_youtube }}" target='_blank'>
+								<i class="fa-brands fa-youtube"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<header id="header" class="site-header sticky-top" data-drupal-selector="site-header">
+		{# navbar #}
+		<nav class="navbar">
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+					<svg class="open-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="28" viewbox="0 0 48 28">
+						<g transform="translate(-205 -94)">
+							<rect width="48" height="4" rx="2" transform="translate(205 94)" fill="#284544"/>
+							<rect width="48" height="4" rx="2" transform="translate(205 106)" fill="#284544"/>
+							<rect width="48" height="4" rx="2" transform="translate(205 118)" fill="#284544"/>
+						</g>
+					</svg>
+
+					<svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="38.348" height="35.091" viewbox="0 0 38.348 35.091">
+						<g transform="translate(-209.826 -73.455)">
+							<rect width="48" height="4" rx="2" transform="translate(212.503 73.455) rotate(42)" fill="#284544"/>
+							<rect width="48" height="4" rx="2" transform="translate(248.174 76.427) rotate(138)" fill="#284544"/>
+						</g>
+					</svg>
+
+				</button>
+				{{ page.header }}
+				<div class="collapse navbar-collapse" id="navbarScroll">
+					{{ page.primary_menu }}
+					{{ management_message }}
+						<a href="mailto:{{ january_info_link_email }}">{{ january_info_link_email }}</a>
+						<a href="tel:+{{ january_info_link_phone }}">+{{ january_info_link_phone }}</a>
+					</p>
+				</div>
+			</div>
+		</nav>
+	</header>
+{% endif %}
+
+{% if page.highlighted or page.secondary_menu %}
+<div class='page-highlighted'>
+	{{ page.highlighted }}
+	{{ page.page.secondary_menu }}
+</div>
+{% endif %}
+
+{% if page.hero %}
+	{{ page.hero }}
+{% endif %}
+
+{% if not is_front %}
+<div class="small-banner">
+  <div class="page-title">
+    <div class="container">
+      <div class="col wow fadeInUpBig">
+        <div class="inner-right">
+          <h1>{{ page['#title'] }}</h1>
+          {% if page.breadcrumb  %}
+            {{ page.breadcrumb }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+<main role="main">
+	{% if page.sidebar and not is_front %}	
+		<div class="page-with-sidebar section-spacing inner-page">
+			<div class="container">
+		        <div class="row">
+					<div class='col-md-8 col-lg-9'>
+	{% elseif not is_front %}
+		<div class="page-without-sidebar section-spacing inner-page">
+			<div class='container'>
+	{% else %}
+		<div class="page-without-sidebar section-spacing">
+	{% endif %}
+			{{ page.content_above }}
+			{{ page.content }}
+			{{ page.content_below }}
+	{% if page.sidebar and not is_front %}	
+					</div>
+					<div class="col-md-4 col-lg-3 right-sidebar">
+						{{ page.sidebar }}
+					</div>
+				</div>
+			</div>
+		</div>
+	{% elseif not is_front %}
+			</div>
+		</div>
+	{% else %}
+		</div>
+	{% endif %}
+</main>
+
+{% if page.footer_first or page.footer_second or page.footer_third or page.footer_bottom %}
+ <footer class="site-footer wow fadeInUp">
+	{% if page.footer_first or page.footer_second or page.footer_third %}
+	<div class='footer-top'>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-3">
+					<div class='footer-contact'>
+						<div class="footer-logo">
+							<a href="/"><img src="/themes/custom/coderider/logowhite.svg" alt="Logo"></a>
+							{{ page.footer_first }}
+						</div>
+						<div class="icon-row">
+							<i class="fa-solid fa-location-dot"></i>
+							<p>{{ january_info_link_address }}</p>
+						</div>      
+						<div class="icon-row">
+							<i class="fa-solid fa-phone"></i>
+							<a href="tel:+{{ january_info_link_phone }}">+{{ january_info_link_phone }}</a>
+						</div>
+						<div class="icon-row">
+							<i class="fa-regular fa-envelope-open"></i>
+							<a href="mailto:{{ january_info_link_email }}">{{ january_info_link_email }}</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-6">
+					<div class ='footer-quick-link'>
+						{{ page.footer_second }}
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class='footer-subscribe-us'>
+						{{ page.footer_third }}
+						<ul class="social-links list-inline d-flex align-items-center m-0">
+							<li class='facebook'>
+								<a href="{{ january_social_link_facebook }}" target='_blank'>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+							</li>
+							<li class='twitter'>
+								<a href="{{ january_social_link_twitter }}" target='_blank'>
+									<i class="fa-brands fa-twitter"></i>
+								</a>
+							</li>
+							<li class='insta'>
+								<a href="{{ january_social_link_instagram }}" target='_blank'>
+									<i class="fa-brands fa-instagram"></i>
+								</a>
+							</li>
+							<li class='youtube'>
+								<a href="{{ january_social_link_youtube }}" target='_blank'>
+									<i class="fa-brands fa-youtube"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	<div class="copyright-sec">
+		<div class="container">
+			<div class="row align-items-center">		
+				{% if page.footer_bottom %}
+					<div class="col-md-6 text-center text-lg-start">
+						All Rights Reserved by @2023
+					</div>
+					 <div class="col-md-6 text-center text-lg-end designerdby">
+					 	<a href="https://github.com/code-rider">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">  <image id="image0" width="16" height="16" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAw1BMVEX0gSj0gyzzdhb6yaP9 6dnzehz0gir96Nj5tYHzdxf0fiP1kEL0hS/zeRr6yqX96dr0fCD0hC35toPzeRv0hjD0gCf2kkXy awL6xZv859bwbgnxdxnwbgr85tT4r3bybAPzcxD1hzL/9u7/yZn/zaD/ypr/9u3838n6xZz6yKH7 0K7y9/7J1+3M2u7y9/3/8+j859f97N4aLmklOnPJ1uv/tHXwbwv1ijgwRX0lOnTM2ez/uX7xeBr0 hS70fyX1kUT///9NSq1tAAAAAWJLR0RA/tlc2AAAAAd0SU1FB+cBDQURDSM87bEAAACNSURBVBjT hY9XFoIwFERfSBM1EKxArBA7WIgF+/535QLeh7/3nJm5AwDEo4wLwWXDJ80WIEBIWwWhjiItO91e fwCep4ZxkhozGk+majYHSoNYZrm1i+VqHWy2wFiYZLuiLIv94RjKE3Cu07yonKvOl6v2byBEZGzp 6vr+eL7eny8GKIJK0SwSQ+p/3/4AUrgXcZWWOC8AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDEt MTNUMDU6MTc6MTMrMDA6MDCPV1nyAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAxLTEzVDA1OjE3 OjEzKzAwOjAw/grhTgAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyMy0wMS0xM1QwNToxNzoxMysw MDowMKkfwJEAAAAASUVORK5CYII="/></svg>
+							CodeRiders
+						</a>
+					</div>
+				{% else %}
+						{{ page.footer_bottom }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</footer>
+<a href="#top" id="top"><span class="topbutton"><i class="fa-solid fa-angle-up"></i></span></a>
+{% endif %}

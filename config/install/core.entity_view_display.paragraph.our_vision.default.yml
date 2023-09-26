@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_vision.field_body
+    - field.field.paragraph.our_vision.field_title
+    - paragraphs.paragraphs_type.our_vision
+  module:
+    - text
+id: paragraph.our_vision.default
+targetEntityType: paragraph
+bundle: our_vision
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

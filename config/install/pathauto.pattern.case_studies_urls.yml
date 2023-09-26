@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: case_studies_urls
+label: 'Case Studies URLs'
+type: 'canonical_entities:node'
+pattern: 'case/[node:title]'
+selection_criteria:
+  9cf908df-9f8b-4c5f-8251-235b310d260c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 9cf908df-9f8b-4c5f-8251-235b310d260c
+    context_mapping:
+      node: node
+    bundles:
+      case_studies: case_studies
+selection_logic: and
+weight: -5
+relationships: {  }
