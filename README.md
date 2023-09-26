@@ -42,6 +42,7 @@ Seamlessly integrate your social media profiles to expand your online presence.
 <td valign="top"> <img src="/assets/images/Home-January.png" /> </td>
 </tr>
 </table>  
+
 # How to Get Started:  
 
 ### Installation:  
