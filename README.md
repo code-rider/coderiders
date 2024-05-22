@@ -76,16 +76,16 @@ Currently, when we are writing this profile Drupal's latest version is 10.1.2
 	  [Twig Tweak](https://www.drupal.org/project/twig_tweak)  
     
     Download all required modules in install-dir/modules/contrib
-    Or by using <code>composer require 'drupal/module'</code> for all above modules
+    Or by using ==composer require 'drupal/module'== for all above modules
 
   **Required Theme**  
     [January Bootstrap 5 theme](https://www.drupal.org/project/january_theme)  
 
     Download Required theme in install-dir/themes/contrib 
-    Or by using composer <code>composer require 'drupal/january_theme:^1.0'</code>
+    Or by using composer ==composer require 'drupal/january_theme:^1.0'==
 
   **CodeRiders Profile**  
-    Download this Repository and place in install-dir/profiles
+    Download this Repository and place it in install-dir/profiles
 
 **Step 3.**  
   Start Installation of Drupal in a standard way  
@@ -101,9 +101,9 @@ Currently, when we are writing this profile Drupal's latest version is 10.1.2
   1. Aggregate CSS files  
   2. Aggregate JavaScript files  
   Press the "Save Configuration" button  
-  After page reload and configurations are saved  
+  After the page reloads and configurations are saved  
   Clear cache  
-  Press  the "Clear all caches" button after the page reloads and all Caches cleared navigate to the front page  
+  Press  the "Clear all caches" button after the page reloads and all Caches are cleared navigate to the front page  
   You are ready to go online   
 
 **Step 5.**  (optional)
