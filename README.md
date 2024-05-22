@@ -76,11 +76,13 @@ Currently, when we are writing this profile Drupal's latest version is 10.1.2
 	  [Twig Tweak](https://www.drupal.org/project/twig_tweak)  
     
     Download all required modules in install-dir/modules/contrib
+    Or by using <code>composer require 'drupal/module'</code> for all above modules
 
   **Required Theme**  
     [January Bootstrap 5 theme](https://www.drupal.org/project/january_theme)  
 
-    Download Required theme in install-dir/themes/contrib  
+    Download Required theme in install-dir/themes/contrib 
+    Or by using composer <code>composer require 'drupal/january_theme:^1.0'</code>
 
   **CodeRiders Profile**  
     Download this Repository and place in install-dir/profiles
