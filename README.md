@@ -115,7 +115,8 @@ Currently, when we are writing this profile Drupal's latest version is 10.1.2
   
   Maybe when you download this repository, both issues will be solved or fixed in the new version  
   But if issues are not fixed, these issues have a patch, and you may apply these simple patches  
-
+**Issue solver**
+  If problem while installation please follow this [issue](https://github.com/code-rider/coderiders/issues/2) first.
 # Customization  
 Personalize your site by updating the content, theme settings, and configuration to align with your brand and objectives.  
 
